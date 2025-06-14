@@ -1,7 +1,7 @@
 import './assets/main.css'
 import 'primeicons/primeicons.css'
 
-import { createApp } from 'vue'
+import { createApp, onMounted } from 'vue'
 import { createPinia } from 'pinia'
 import { clerkPlugin } from '@clerk/vue'
 import PrimeVue from 'primevue/config'

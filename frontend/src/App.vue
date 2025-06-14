@@ -1,8 +1,16 @@
 <script setup>
+import { onMounted } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
 import { SignedIn, SignedOut, SignInButton, UserButton, SignIn } from '@clerk/vue'
 import Sidebar from './components/common/Sidebar.vue'
 import Header from './components/common/Header.vue'
+import { useUserStore } from './stores/userStore'
+
+const userStore = useUserStore()
+
+onMounted(async () => {
+  await userStore.initializeUser()
+})
 </script>
 
 <template>
